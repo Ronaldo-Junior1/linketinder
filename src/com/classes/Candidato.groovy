@@ -4,29 +4,24 @@ package com.classes
 class Candidato extends Pessoa{
     String cpf
     int idade
-    ArrayList<String> competencias
 
-
-    Candidato(String nome, String email, String estado, String cep, String descricao, String cpf, int idade, ArrayList<String> competencias) {
-        super(nome, email, estado, cep, descricao)
+    Candidato(String nome, String email, String estado, String cep, String descricao, ArrayList<String> competencias, String cpf, int idade) {
+        super(nome, email, estado, cep, descricao, competencias)
         this.cpf = cpf
         this.idade = idade
-        this.competencias = competencias
-
     }
-
 
     @Override
     String toString() {
         return "Candidato{" +
                 "nome='"+ nome + '\'' +
-                "nome='"+ email + '\'' +
-                "nome='"+ estado + '\'' +
-                "nome='"+ cep + '\'' +
-                "nome='"+ descricao + '\'' +
-                "cpf='" + cpf + '\'' +
+                ", email='"+ email + '\'' +
+                ", estado='"+ estado + '\'' +
+                ", cep='"+ cep + '\'' +
+                ", descrição='"+ descricao + '\'' +
+                ", competencias=" + competencias + '\''+
+                ", cpf='" + cpf + '\'' +
                 ", idade=" + idade +
-                ", competencias=" + competencias +
                 '}';
     }
 
