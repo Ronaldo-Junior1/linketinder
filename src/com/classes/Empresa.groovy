@@ -25,7 +25,7 @@ class Empresa extends Pessoa{
                 '}';
     }
 
-    static listarEmpresa(List<Empresa> empresas) {
+    static listarEmpresas(List<Empresa> empresas) {
         empresas.each { empresa ->
             println(empresa)
         }
