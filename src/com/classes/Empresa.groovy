@@ -19,15 +19,11 @@ class Empresa extends Pessoa{
                 ", estado='"+ estado + '\'' +
                 ", cep='"+ cep + '\'' +
                 ", descrição='"+ descricao + '\'' +
-                ", competencias=" + competencias + '\''+
-                "cnpj='" + cnpj + '\'' +
-                ", pais='" + pais +
-                '}';
+                ", competencias='" + competencias + '\''+
+                ", cnpj='" + cnpj + '\'' +
+                ", pais='" + pais + '\'' +
+                '}'
     }
 
-    static listarEmpresas(List<Empresa> empresas) {
-        empresas.each { empresa ->
-            println(empresa)
-        }
-    }
+
 }
