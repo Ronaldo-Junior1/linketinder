@@ -1,3 +1,5 @@
+package viewer
+
 import com.classes.Candidato
 import com.classes.CandidatoManager
 import com.classes.Empresa
@@ -28,41 +30,41 @@ static void main(String[] args) {
                 break
             case 3:
                 scanner.nextLine()
-                System.out.println("Digite o nome do candidato (ou 'sair' para encerrar): ");
+                println("Digite o nome do candidato (ou 'sair' para encerrar): ");
                 String nome = scanner.nextLine()
 
                 if (nome.equalsIgnoreCase("sair")) {
                     break
                 }
 
-                System.out.println("Digite o email do candidato: ")
+                println("Digite o email do candidato: ")
                 String email = scanner.nextLine()
 
-                System.out.println("Digite o estado do candidato: ")
+                println("Digite o estado do candidato: ")
                 String estado = scanner.nextLine()
 
-                System.out.println("Digite o CEP do candidato: ")
+                println("Digite o CEP do candidato: ")
                 String cep = scanner.nextLine()
 
-                System.out.println("Digite a descrição do candidato: ")
+                println("Digite a descrição do candidato: ")
                 String descricao = scanner.nextLine()
 
-                System.out.println("Digite as competências do candidato (separadas por vírgula): ")
+                println("Digite as competências do candidato (separadas por vírgula): ")
                 String competenciasInput = scanner.nextLine()
                 List<String> competencias = competenciasInput.split(",")
 
-                System.out.println("Digite o CPF do candidato: ")
+                println("Digite o CPF do candidato: ")
                 String cpf = scanner.nextLine()
 
                 int idade
                 while (true) {
-                    System.out.println("Digite a idade do candidato")
+                    println("Digite a idade do candidato")
                     String idadeInput = scanner.nextLine()
                     try {
                         idade = Integer.parseInt(idadeInput)
                         break
                     } catch (NumberFormatException e) {
-                        System.out.println("Idade inválida. Por favor, digite um número inteiro.")
+                        println("Idade inválida. Por favor, digite um número inteiro.")
                     }
                 }
 
