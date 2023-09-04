@@ -2,11 +2,10 @@ package com.test
 
 import com.classes.Empresa
 import com.classes.EmpresaManager
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*
+
 
 class EmpresaTest {
 

@@ -19,17 +19,13 @@ class Candidato extends Pessoa{
                 ", estado='"+ estado + '\'' +
                 ", cep='"+ cep + '\'' +
                 ", descrição='"+ descricao + '\'' +
-                ", competencias=" + competencias + '\''+
+                ", competencias='" + competencias + '\''+
                 ", cpf='" + cpf + '\'' +
-                ", idade=" + idade +
+                ", idade='" + idade + '\''+
                 '}';
     }
 
-   static listarCandidatos(List<Candidato> candidatos) {
-       candidatos.each { candidato ->
-           println(candidato)
-       }
-    }
+
 
 }
 
