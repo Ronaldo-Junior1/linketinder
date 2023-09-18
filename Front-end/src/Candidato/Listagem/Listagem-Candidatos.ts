@@ -13,4 +13,44 @@ document.addEventListener('DOMContentLoaded', () => {
         listItem.textContent = candidato.nome;
         listaCandidatos?.appendChild(listItem);
     });
+
+
+    const canvas = document.getElementById('graficoHabilidades') as HTMLCanvasElement;
+
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+            const competenciasCount: { [key: string]: number } = {};
+
+        candidatos.forEach((candidato: any) => {
+            candidato.competencias.forEach((competencia:any) => {
+                if (competenciasCount[competencia]) {
+                    competenciasCount[competencia]++;
+                } else {
+                    competenciasCount[competencia] = 1;
+                }
+            });
+        });
+
+        const labels = Object.keys(competenciasCount);
+        const data = Object.values(competenciasCount);
+
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Quantidade de Candidatos por Habilidade',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+    }
+        }
+        
 });
+
+

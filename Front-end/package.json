@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/chart.js": "^2.9.38",
     "live-server": "^1.2.2"
   }
 }
