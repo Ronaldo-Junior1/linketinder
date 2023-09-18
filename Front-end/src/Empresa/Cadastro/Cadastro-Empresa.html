@@ -4,38 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="Cadastro-Empresa.css">
 </head>
 <body>
-    <form id="formEmpresa">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required><br>
+    <div class="container">
+        <header>
+            <form id="formEmpresa">
+                <div class="form first">
+                    Formulário de Cadastro
+                    <div class="details personal">
+                        <span class="title">
+                            DADOS EMPRESARIAL
+                        </span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>NOME</label>
+                                <input type="text" placeholder="Insira o nome" id="nome" required>
+                            </div>
+                            <div class="input-field">
+                                <label>E-MAIL</label>
+                                <input type="email" placeholder="Insira o e-mail" id="email" required>
+                            </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" required><br>
+                            <div class="input-field">
+                                <label>COMPETENCIAS(Separe por virgula)</label>
+                                <input type="text" placeholder="Insira as competencias" id="competencias" required>
+                            </div>
 
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" required><br>
-
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" required><br>
-
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" required><br>
-
-        <label for="competencias">Competências (separadas por vírgula):</label>
-        <input type="text" id="competencias" required><br>
-
-        <label for="cnpj">CPF:</label>
-        <input type="text" id="cnpj" required><br>
-
-        <label for="pais">País:</label>
-        <input type="text" id="pais" required><br>
-
-        <button type="submit">Cadastrar Empresa</button>
-    </form>
-
-    <a href="../Listagem/Listagem-Empresas.html">Lista de Empresas<a>
-
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>CEP</label>
+                                <input type="text" placeholder="Insira o CEP" id="cep" required>
+                            </div>
+                            <div class="input-field">
+                                <label>ESTADO</label>
+                                <input type="text" placeholder="Insira o estado" id="estado" required>
+                            </div>
+                            <div class="input-field">
+                                <label>PAIS</label>
+                                <input type="text" placeholder="Insira o pais" id="pais" required>
+                            </div>
+                            <div class="input-field">
+                                <label>CNPJ</label>
+                                <input type="text" placeholder="Insira o CNPJ" id="cnpj" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>DESCRIÇÃO</label>
+                                <input type="text" placeholder="Insira a descrição" id="descricao" required>
+                            </div>
+                        </div>
+                        <button type="submit">Cadastrar Empresa</button>
+                    </div>
+                </div>
+                <a href="../Listagem/Listagem-Empresas.html">Lista de Empresas<a>
+            </form>
+        </header>
+    </div>
     <script src="Cadastro-Empresa.js"></script>
 </body>
 </html>
