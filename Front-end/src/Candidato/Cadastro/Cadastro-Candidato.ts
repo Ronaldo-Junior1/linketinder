@@ -8,6 +8,7 @@ class Candidato {
     competencias: string[];
     cpf: string;
     idade: number;
+    formacao:string;
 
     constructor(
         nome: string,
@@ -17,7 +18,8 @@ class Candidato {
         descricao: string,
         competencias: string[],
         cpf: string,
-        idade: number
+        idade: number,
+        formacao:string
     ) {
         this.nome = nome;
         this.email = email;
@@ -27,6 +29,7 @@ class Candidato {
         this.competencias = competencias;
         this.cpf = cpf;
         this.idade = idade;
+        this.formacao = formacao
     }
 }
 
@@ -43,8 +46,9 @@ document.getElementById('formCandidato')?.addEventListener('submit', (event) => 
     const competencias = (<HTMLInputElement>document.getElementById('competencias')).value.split(',');
     const cpf = (<HTMLInputElement>document.getElementById('cpf')).value;
     const idade = parseInt((<HTMLInputElement>document.getElementById('idade')).value);
+    const formacao = (<HTMLInputElement>document.getElementById('formacao')).value;
 
-    const novoCandidato = new Candidato(nome, email, estado, cep, descricao, competencias, cpf, idade);
+    const novoCandidato = new Candidato(nome, email, estado, cep, descricao, competencias, cpf, idade,formacao);
     candidatos.push(novoCandidato);
 
     localStorage.setItem('candidatos', JSON.stringify(candidatos));

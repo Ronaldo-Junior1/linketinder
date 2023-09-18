@@ -3,13 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const listaCandidatos = document.getElementById('listaCandidatos');
     // Obtém os candidatos do armazenamento local
     const candidatosString = localStorage.getItem('candidatos');
-    const candidatos = candidatosString ? JSON.parse(candidatosString) : [];
+    const candidatosAvailable = candidatosString ? JSON.parse(candidatosString) : [];
     console.log(candidatosString);
-    console.log(candidatos);
-    candidatos.forEach((candidato) => {
+    console.log(candidatosAvailable);
+    candidatosAvailable.forEach((candidato) => {
         const listaCandidatos = document.getElementById('listaCandidatos');
         const listItem = document.createElement('li');
-        listItem.textContent = candidato.nome;
+        const textoCandidato = `${candidato.nome}, Conhecimentos em: [${candidato.competencias.join(',')}] - Formado em: ${candidato.formacao}`;
+        listItem.textContent = textoCandidato;
         listaCandidatos === null || listaCandidatos === void 0 ? void 0 : listaCandidatos.appendChild(listItem);
     });
     const canvas = document.getElementById('graficoHabilidades');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ctx = canvas.getContext('2d');
         if (ctx) {
             const competenciasCount = {};
-            candidatos.forEach((candidato) => {
+            candidatosAvailable.forEach((candidato) => {
                 candidato.competencias.forEach((competencia) => {
                     if (competenciasCount[competencia]) {
                         competenciasCount[competencia]++;
@@ -38,8 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             data: data,
                             backgroundColor: 'rgba(75, 192, 192, 0.2)',
                             borderColor: 'rgba(75, 192, 192, 1)',
-                            borderWidth: 1
-                        }]
+                            borderWidth: 3,
+                            barThickness: 300
+                        }],
+                },
+                options: {
+                    responsive: true
                 }
             });
         }

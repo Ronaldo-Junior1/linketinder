@@ -1,7 +1,7 @@
 "use strict";
 var _a;
 class Candidato {
-    constructor(nome, email, estado, cep, descricao, competencias, cpf, idade) {
+    constructor(nome, email, estado, cep, descricao, competencias, cpf, idade, formacao) {
         this.nome = nome;
         this.email = email;
         this.estado = estado;
@@ -10,6 +10,7 @@ class Candidato {
         this.competencias = competencias;
         this.cpf = cpf;
         this.idade = idade;
+        this.formacao = formacao;
     }
 }
 let candidatos = [];
@@ -23,7 +24,8 @@ let candidatos = [];
     const competencias = document.getElementById('competencias').value.split(',');
     const cpf = document.getElementById('cpf').value;
     const idade = parseInt(document.getElementById('idade').value);
-    const novoCandidato = new Candidato(nome, email, estado, cep, descricao, competencias, cpf, idade);
+    const formacao = document.getElementById('formacao').value;
+    const novoCandidato = new Candidato(nome, email, estado, cep, descricao, competencias, cpf, idade, formacao);
     candidatos.push(novoCandidato);
     localStorage.setItem('candidatos', JSON.stringify(candidatos));
     console.log('Candidato adicionado:', novoCandidato);

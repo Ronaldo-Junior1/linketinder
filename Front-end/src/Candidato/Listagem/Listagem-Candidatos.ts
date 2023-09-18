@@ -4,13 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Obtém os candidatos do armazenamento local
     const candidatosString = localStorage.getItem('candidatos');
-    const candidatos = candidatosString ? JSON.parse(candidatosString) : [];
+    const candidatosAvailable = candidatosString ? JSON.parse(candidatosString) : [];
     console.log(candidatosString)
-    console.log(candidatos)
-    candidatos.forEach((candidato: any) => { 
+    console.log(candidatosAvailable)
+
+    candidatosAvailable.forEach((candidato: any) => { 
         const listaCandidatos = document.getElementById('listaCandidatos');
         const listItem = document.createElement('li');
-        listItem.textContent = candidato.nome;
+  
+        const textoCandidato = `${candidato.nome}, Conhecimentos em: [${candidato.competencias.join(',')}] - Formado em: ${candidato.formacao}`;
+        listItem.textContent = textoCandidato;
         listaCandidatos?.appendChild(listItem);
     });
 
@@ -22,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ctx) {
             const competenciasCount: { [key: string]: number } = {};
 
-        candidatos.forEach((candidato: any) => {
+        candidatosAvailable.forEach((candidato: any) => {
             candidato.competencias.forEach((competencia:any) => {
                 if (competenciasCount[competencia]) {
                     competenciasCount[competencia]++;
@@ -44,12 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     data: data,
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            }
+                    borderWidth: 3,
+                    barThickness: 300
+                }],
+            },
+            options: {
+                responsive: true
+              }
         });
+
+        
     }
-        }
+}
         
 });
 

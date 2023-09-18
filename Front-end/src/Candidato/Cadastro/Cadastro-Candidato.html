@@ -4,37 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="Cadastro-Candidato.css">
 </head>
 <body>
-    <form id="formCandidato">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required><br>
+    <div class="container">
+        <header>
+            <form id="formCandidato">
+                <div class="form first">
+                    Formulário de Cadastro
+                    <div class="details personal">
+                        <span class="title">
+                            DADOS PESSOAIS
+                        </span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>NOME</label>
+                                <input type="text" placeholder="Insira seu nome" id="nome" required>
+                            </div>
+                            <div class="input-field">
+                                <label>E-MAIL</label>
+                                <input type="email" placeholder="Insira seu e-mail" id="email" required>
+                            </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" required><br>
+                            <div class="input-field">
+                                <label>COMPETENCIAS(Separadas por virgula)</label>
+                                <input type="text" placeholder="Insira suas competencias" id="competencias" required>
+                            </div>
 
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" required><br>
-
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" required><br>
-
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" required><br>
-
-        <label for="competencias">Competências (separadas por vírgula):</label>
-        <input type="text" id="competencias" required><br>
-
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" required><br>
-
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" required><br>
-
-        <button type="submit">Cadastrar Candidato</button>
-    </form>
-
-    <a href="../Listagem/Listagem-Candidatos.html">Lista de Candidatos<a>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>CEP</label>
+                                <input type="text" placeholder="Insira seu CEP" id="cep" required>
+                            </div>
+                            <div class="input-field">
+                                <label>ESTADO</label>
+                                <input type="text" placeholder="Insira seu estado" id="estado" required>
+                            </div>
+                            <div class="input-field">
+                                <label>CPF</label>
+                                <input type="text" placeholder="Insira seu CPF" id="cpf" required>
+                            </div>
+                            <div class="input-field">
+                                <label>IDADE</label>
+                                <input type="number" min="5" max="110"placeholder="Insira sua idade" id="idade" required>
+                            </div>
+                            <div class="input-field">
+                                <label>FORMAÇÃO</label>
+                                <input type="text" placeholder="Insira sua Formação" id="formacao" required>
+                            </div>
+                            <div class="input-field">
+                                <label>DESCRIÇÃO</label>
+                                <input type="text" placeholder="Insira sua descrição" id="descricao" required>
+                            </div>
+                        </div>
+                        <button type="submit">Cadastrar Candidato</button>
+                    </div>
+                </div>
+                <a href="../Listagem/Listagem-Candidatos.html">Lista de Candidatos<a>
+            </form>
+        </header>
+    </div>
+   
         
     <script src="Cadastro-Candidato.js"></script>
 </body>
