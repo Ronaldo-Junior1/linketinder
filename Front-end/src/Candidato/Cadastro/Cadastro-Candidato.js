@@ -25,6 +25,7 @@ let candidatos = [];
     const idade = parseInt(document.getElementById('idade').value);
     const novoCandidato = new Candidato(nome, email, estado, cep, descricao, competencias, cpf, idade);
     candidatos.push(novoCandidato);
+    localStorage.setItem('candidatos', JSON.stringify(candidatos));
     console.log('Candidato adicionado:', novoCandidato);
     console.log('Lista de Candidatos:', candidatos);
     const listaCandidatos = document.getElementById('listaCandidatos');
