@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+    
+</head>
+<body>
+ <div class="centro">
+     <h1>Login</h1>
+ 
+ <form id="loginForm">
+     <div class="txt_field">
+         <input type="text" required>
+         <span></span>
+         <label>Username</label>
+     </div>
+     <div class="txt_field">
+        <input type="password" required>
+        <span></span>
+        <label>Senha</label>
+    </div>
+    <div class="radio_field">
+        <input type="radio" name="tipo_usuario" value="empresa" required>
+        <label>Empresa</label>
+    </div>
+    <div class="radio_field">
+        <input type="radio" name="tipo_usuario" value="candidato" required>
+        <label>Candidato</label>
+    </div>
+    <div class="pass">Esqueceu a senha?</div>
+    <input type="submit" value="Login">
+
+    <div class="singup_link">
+        Não é um membro? <a id="cadastroLink" href="#">Cadastrar-se</a>
+    </div>
+    
+</div>
+ </form>
+ <script src="Login.js"></script>
+</body>
+</html>

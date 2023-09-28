@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     candidatosAvailable.forEach((candidato) => {
         const listaCandidatos = document.getElementById('listaCandidatos');
         const listItem = document.createElement('li');
-        const textoCandidato = `${candidato.nome}, Conhecimentos em: [${candidato.competencias.join(',')}] - Formado em: ${candidato.formacao}`;
+        const textoCandidato = `Conhecimentos em: [${candidato.competencias.join(',')}] - Formado em: ${candidato.formacao}`;
         listItem.textContent = textoCandidato;
         listaCandidatos === null || listaCandidatos === void 0 ? void 0 : listaCandidatos.appendChild(listItem);
     });
