@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const listaEmpresas = document.getElementById('listaEmpresas');
         const listItem = document.createElement('li');
-         const textoEmpresa = `A empresa ${empresa.nome}, busca alguem com conhecimentos em: [${empresa.competencias.join(',')}]`;
+         const textoEmpresa = `A empresa busca alguem com conhecimentos em: [${empresa.competencias.join(',')}]`;
         listItem.textContent = textoEmpresa;
         listaEmpresas?.appendChild(listItem);
     });

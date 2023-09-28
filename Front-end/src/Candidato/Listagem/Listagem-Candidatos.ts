@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const listaCandidatos = document.getElementById('listaCandidatos');
         const listItem = document.createElement('li');
   
-        const textoCandidato = `${candidato.nome}, Conhecimentos em: [${candidato.competencias.join(',')}] - Formado em: ${candidato.formacao}`;
+        const textoCandidato = `Conhecimentos em: [${candidato.competencias.join(',')}] - Formado em: ${candidato.formacao}`;
         listItem.textContent = textoCandidato;
         listaCandidatos?.appendChild(listItem);
     });
